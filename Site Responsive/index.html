@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive</title>
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <a href="#" class="logo">HighZile Dev</a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="infos.html">Infos</a></li>
+                <li><a href="Musique.html">Musique</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img src="images/menu2.png" alt="bouton menu" class="bouton-menu">
+    </nav>  
+    </header>
+    
+    <div class="container">
+        <h1>HighZile Prod</h1>
+        <h2>Content creator</h2>
+    </div>  
+
+    <script>
+        const boutonmenu = document.querySelector(".bouton-menu")
+        const navlinks = document.querySelector(".nav-links")
+
+        boutonmenu.addEventListener('click',()=>
+        {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+</body>
+
+</html>
+

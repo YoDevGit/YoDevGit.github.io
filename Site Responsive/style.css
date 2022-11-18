@@ -1,0 +1,171 @@
+/* Font Advent pro */
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&display=swap');
+
+/* Font Dancing script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*
+{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: 'Advent pro', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/montagne.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container
+{
+    display: flex;
+    padding-top: 8em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1
+{
+    color: white; 
+    padding: 1em;   
+}
+
+h2
+{
+    color: white;
+}
+
+/*********** Navbar ***********/
+nav
+{
+    background-color: black;
+    position: fixed;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar
+{
+    position: absolute;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'dancing script', cursive;
+}
+
+.navbar a
+{
+    color: white;
+}
+
+.navbar .logo
+{
+    font-size: 3em;
+    margin-left: 0.2em;
+}
+
+.navbar .nav-links ul
+{
+    display: flex;
+}
+
+.navbar .nav-links ul li
+{
+    margin: 0 25px;
+    font-size: 2em;
+}
+
+/* lien actif dans la navbar */
+.navbar .nav-links ul li.active a
+{
+    color: greenyellow;
+    font-weight: 600;
+}
+
+.navbar .bouton-menu
+{
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    width: 35px;
+}
+
+/*********** Responsive ***********/
+
+@media screen and (max-width: 800px)
+{
+    .navbar
+    {
+        padding: 0;
+    }
+
+    .navbar .bouton-menu
+    {
+        display: block;
+        right: 25px;
+    }
+
+    .nav-links
+    {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(145, 144, 144, 0.288);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav-links.mobile-menu
+    {
+        margin-left: 0;
+
+    }
+
+    .nav-links ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li
+    {
+        margin: 25px 0;
+        font-size: 1.5em;
+    }
+
+    .navbar .logo
+    {
+        position: absolute;
+        top: 50px;
+        left: 30px;
+        font-size: 3em;
+    }
+}
+/*********** ***********/
